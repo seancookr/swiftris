@@ -47,6 +47,8 @@ class GameScene: SKScene {
         shapeLayer.position = LayerPosition
         shapeLayer.addChild(gameBoard)
         gameLayer.addChild(shapeLayer)
+        
+        runAction(SKAction.repeatActionForever(SKAction.playSoundFileNamed("theme.mp3", waitForCompletion: true)))
     }
     
     func pointForColumn(column: Int, row: Int) -> CGPoint {
@@ -174,5 +176,9 @@ class GameScene: SKScene {
         }
 
         runAction(SKAction.waitForDuration(longestDuration), completion:completion)
+    }
+    
+    func playSound(sound:String) {
+        runAction(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
     }
 }
