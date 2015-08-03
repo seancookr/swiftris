@@ -20,6 +20,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="GDn-7m-joy" appends="YES" id="FNd-3X-T8X"/>
                             <outletCollection property="gestureRecognizers" destination="vwT-vI-M0C" appends="YES" id="FL5-tb-O3J"/>
+                            <outletCollection property="gestureRecognizers" destination="IHb-XS-UfD" appends="YES" id="MH8-pc-sS1"/>
                         </connections>
                     </view>
                 </viewController>
@@ -36,6 +37,12 @@
                         <outlet property="delegate" destination="LVB-YS-i5n" id="tlT-gJ-epH"/>
                     </connections>
                 </panGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="IHb-XS-UfD">
+                    <connections>
+                        <action selector="didSwipe:" destination="LVB-YS-i5n" id="Egl-kj-YbO"/>
+                        <outlet property="delegate" destination="LVB-YS-i5n" id="Ckj-bP-0qe"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
